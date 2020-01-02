@@ -15,6 +15,7 @@ quoteInputElement.addEventListener('input', ()=>{
     } else if(character === characterSpan.innerText) {
       characterSpan.classList.add('correct')
       characterSpan.classList.remove('incorrect')
+      correct = true
     } else{
       characterSpan.classList.remove('correct')
       characterSpan.classList.add('incorrect')
