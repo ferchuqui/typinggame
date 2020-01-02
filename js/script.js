@@ -9,17 +9,18 @@ quoteInputElement.addEventListener('input', () => {
   const arrayValue = quoteInputElement.value.split('');
 
   arrayQuote.forEach((characterSpan, index) => {
-    const character = arrayValue[index];
-    if (character === null) {
-      characterSpan.classList.remove('incorrect');
-      correct = false;
-    } else if (character === characterSpan.innerText) {
-      characterSpan.classList.add('correct');
-      characterSpan.classList.remove('incorrect');
-    } else {
-      characterSpan.classList.remove('correct');
-      characterSpan.classList.add('incorrect');
-      correct = false;
+    const character = arrayValue[index]
+    if (character == null){
+      characterSpan.classList.remove('incorrect')
+      correct = false
+    } else if(character === characterSpan.innerText) {
+      characterSpan.classList.add('correct')
+      characterSpan.classList.remove('incorrect')
+      correct = true
+    } else{
+      characterSpan.classList.remove('correct')
+      characterSpan.classList.add('incorrect')
+      correct = false
     }
   });
   if (correct) renderNewQuote();
@@ -53,4 +54,8 @@ function startTimer() {
 function getTimerTime() {
   return Math.floor((new Date() - starTime) / 1000);
 }
+<<<<<<< HEAD
 renderNewQuote();
+=======
+renderNewQuote()
+>>>>>>> c8f03f850492e1b922fa8a9f795df22fc4e3c553
