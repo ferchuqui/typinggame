@@ -54,8 +54,4 @@ function startTimer() {
 function getTimerTime() {
   return Math.floor((new Date() - starTime) / 1000);
 }
-<<<<<<< HEAD
 renderNewQuote();
-=======
-renderNewQuote()
->>>>>>> c8f03f850492e1b922fa8a9f795df22fc4e3c553
